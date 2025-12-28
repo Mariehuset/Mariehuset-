@@ -1,82 +1,167 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Øyhuset – Mariehuset | Helligvær (Bodø) — Book via Airbnb or Booking.com</title>
-  <meta name="description" content="Historic island farmhouse in Helligvær outside Bodø. Sleeps 6. Book via Airbnb or Booking.com." />
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>Øyhuset – Mariehuset | Helligvær (Bodø)</title>
+  <meta name="description" content="A historic 1898 island farmhouse in Helligvær outside Bodø. Panoramic Lofoten views, island life, and easy booking via Airbnb or Booking.com."/>
+  <meta name="theme-color" content="#0b1220"/>
+
+  <!-- Open Graph (nice when shared) -->
+  <meta property="og:title" content="Øyhuset – Mariehuset | Helligvær (Bodø)"/>
+  <meta property="og:description" content="Historic 1898 island farmhouse. Panoramic views, kayaking, island life. Book via Airbnb or Booking.com."/>
+  <meta property="og:type" content="website"/>
+  <meta property="og:image" content="https://a0.muscache.com/im/pictures/hosting/Hosting-U3RheVN1cHBseUxpc3Rpbmc6MTQyMTE5MTcyNjk3MzM1ODE5NQ%3D%3D/original/58a48159-70d2-43c5-bb39-6c32aee597c5.jpeg?im_w=1600"/>
 
   <style>
     :root{
-      --max: 1120px; --pad: 18px; --radius: 18px;
-      --border:#e9e9e9; --text:#101010; --muted:#555; --bg:#fff;
+      --bg:#070b12;
+      --panel:#0c1220cc;
+      --card:#0e1628;
+      --card2:#0c1424;
+      --text:#f4f7ff;
+      --muted:#b9c2d6;
+      --muted2:#93a1bf;
+      --line:rgba(255,255,255,.10);
+      --accent:#8ee6d2;
+      --accent2:#a8b4ff;
+      --shadow: 0 12px 40px rgba(0,0,0,.45);
+      --radius:22px;
+      --max: 1160px;
+      --pad: 18px;
     }
     *{box-sizing:border-box}
-    body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;line-height:1.5;color:var(--text);background:var(--bg)}
+    html,body{margin:0;padding:0;background:var(--bg);color:var(--text);font-family: ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Arial}
     a{color:inherit}
-    header{position:sticky;top:0;background:#fff;border-bottom:1px solid var(--border);z-index:10}
     .wrap{max-width:var(--max);margin:0 auto;padding:0 var(--pad)}
-    nav{display:flex;align-items:center;justify-content:space-between;gap:14px;flex-wrap:wrap;padding:12px 0}
-    .brand{font-weight:850;letter-spacing:.2px}
-    .menu a{margin:0 10px 0 0;text-decoration:none;font-weight:650;color:#111}
-    .menu a:hover{text-decoration:underline}
-    .langbar{display:flex;gap:8px;align-items:center;flex-wrap:wrap}
-    .langbtn{padding:8px 10px;border-radius:999px;border:1px solid var(--border);background:#fff;font-weight:750;cursor:pointer}
-    .langbtn.active{border-color:#111}
-    section{padding:18px 0;scroll-margin-top:90px}
-    h1{font-size:36px;line-height:1.12;margin:0 0 10px}
+    .glass{background:var(--panel);backdrop-filter: blur(12px);border:1px solid var(--line);border-radius: var(--radius);box-shadow: var(--shadow)}
+    .card{background:linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.03));
+      border:1px solid var(--line);border-radius:var(--radius);box-shadow: var(--shadow)}
+    .cardInner{padding:18px}
+    .muted{color:var(--muted)}
+    .muted2{color:var(--muted2)}
+    .pillRow{display:flex;flex-wrap:wrap;gap:10px;margin-top:14px}
+    .pill{padding:7px 11px;border-radius:999px;border:1px solid var(--line);background:rgba(255,255,255,.04);font-size:13px;color:var(--muted)}
+    .btnRow{display:flex;flex-wrap:wrap;gap:12px;margin-top:18px}
+    .btn{
+      display:inline-flex;align-items:center;gap:10px;
+      padding:12px 14px;border-radius:16px;border:1px solid var(--line);
+      text-decoration:none;font-weight:850;background:rgba(255,255,255,.04)
+    }
+    .btnPrimary{
+      border-color:rgba(142,230,210,.35);
+      background:linear-gradient(135deg, rgba(142,230,210,.18), rgba(168,180,255,.14));
+    }
+    .btn:hover{transform: translateY(-1px)}
+    .icon{width:18px;height:18px;opacity:.92}
+    header{
+      position:sticky;top:0;z-index:20;
+      padding:12px 0;margin:0;
+      background:linear-gradient(180deg, rgba(7,11,18,.92), rgba(7,11,18,.55));
+      backdrop-filter: blur(10px);
+      border-bottom:1px solid rgba(255,255,255,.06);
+    }
+    nav{display:flex;align-items:center;justify-content:space-between;gap:14px;flex-wrap:wrap}
+    .brand{display:flex;flex-direction:column;gap:2px}
+    .brand b{letter-spacing:.2px;font-size:15px}
+    .brand span{font-size:12px;color:var(--muted2)}
+    .navLinks{display:flex;flex-wrap:wrap;gap:10px;align-items:center}
+    .navLinks a{font-weight:800;text-decoration:none;color:var(--muted);padding:8px 10px;border-radius:999px;border:1px solid transparent}
+    .navLinks a:hover{border-color:var(--line);color:var(--text);background:rgba(255,255,255,.03)}
+    .langbar{display:flex;gap:8px;align-items:center}
+    .langbtn{
+      padding:7px 10px;border-radius:999px;border:1px solid var(--line);
+      background:rgba(255,255,255,.03);color:var(--muted);
+      font-weight:850;cursor:pointer
+    }
+    .langbtn.active{color:var(--text);border-color:rgba(142,230,210,.35);background:rgba(142,230,210,.10)}
+    section{padding:26px 0;scroll-margin-top:90px}
+    h1{font-size:44px;line-height:1.06;margin:0}
     h2{font-size:24px;margin:0 0 10px}
     p{margin:10px 0}
-    .muted{color:var(--muted)}
-    .grid{display:grid;gap:16px}
-    .heroGrid{grid-template-columns:1.3fr .7fr}
-    @media (max-width: 920px){ .heroGrid{grid-template-columns:1fr} }
-    .twoCol{grid-template-columns:1fr 1fr}
-    @media (max-width: 920px){ .twoCol{grid-template-columns:1fr} }
-    .card{border:1px solid var(--border);border-radius:var(--radius);padding:16px;background:#fff}
-    .pills{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
-    .pill{border:1px solid var(--border);border-radius:999px;padding:6px 10px;font-size:14px}
-    .ctaRow{display:flex;gap:12px;flex-wrap:wrap;margin-top:14px}
-    .btn{display:inline-block;padding:12px 14px;border-radius:14px;border:1px solid #111;text-decoration:none;font-weight:800}
-    .btnPrimary{background:#111;color:#fff}
-    .heroImg{width:100%;height:100%;min-height:310px;object-fit:cover;border-radius:var(--radius);border:1px solid var(--border)}
-    .gallery{display:grid;grid-template-columns:repeat(12,1fr);gap:12px}
-    .gimg{width:100%;height:100%;object-fit:cover;border-radius:16px;border:1px solid var(--border)}
-    .g1{grid-column:span 7;min-height:320px}
-    .g2{grid-column:span 5;min-height:320px}
+    .hero{
+      position:relative;min-height:560px;border-radius:28px;overflow:hidden;
+      border:1px solid rgba(255,255,255,.08);box-shadow: var(--shadow);
+      background:#000;
+    }
+    .heroImg{
+      position:absolute;inset:0;width:100%;height:100%;object-fit:cover;
+      filter:saturate(1.05) contrast(1.02);
+      transform:scale(1.02);
+    }
+    .heroOverlay{
+      position:absolute;inset:0;
+      background: radial-gradient(1200px 520px at 20% 25%, rgba(12,18,32,.25), rgba(7,11,18,.78)),
+                  linear-gradient(180deg, rgba(7,11,18,.20), rgba(7,11,18,.82));
+    }
+    .heroContent{
+      position:relative;z-index:2;
+      padding:22px;display:grid;gap:16px;
+      grid-template-columns: 1.2fr .8fr;
+      align-items:end;
+      min-height:560px;
+    }
+    @media(max-width: 980px){ .heroContent{grid-template-columns:1fr;align-items:start} h1{font-size:38px} }
+    .heroCard{padding:18px}
+    .kicker{color:var(--accent);font-weight:900;letter-spacing:.18em;text-transform:uppercase;font-size:12px}
+    .subhead{font-size:16px;color:var(--muted);max-width:56ch}
+    .stats{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin-top:10px}
+    .stat{border:1px solid var(--line);border-radius:18px;background:rgba(0,0,0,.18);padding:12px}
+    .stat b{display:block;font-size:14px}
+    .stat span{display:block;font-size:12px;color:var(--muted2);margin-top:3px}
+    .grid{display:grid;gap:14px}
+    .two{grid-template-columns:1fr 1fr}
+    .three{grid-template-columns:repeat(3,1fr)}
+    @media(max-width: 980px){ .two,.three{grid-template-columns:1fr} }
+    .feature{padding:16px}
+    .feature b{display:block;margin:8px 0 4px}
+    .feature p{margin:0;color:var(--muted)}
+    .gallery{
+      display:grid;grid-template-columns:repeat(12,1fr);gap:12px
+    }
+    .gimg{width:100%;height:100%;object-fit:cover;border-radius:20px;border:1px solid var(--line)}
+    .g1{grid-column:span 7;min-height:360px}
+    .g2{grid-column:span 5;min-height:360px}
     .g3,.g4,.g5,.g6{grid-column:span 3;min-height:180px}
-    @media (max-width: 920px){
+    @media(max-width: 980px){
       .g1,.g2{grid-column:span 12}
       .g3,.g4,.g5,.g6{grid-column:span 6}
     }
-    @media (max-width: 520px){
-      .g3,.g4,.g5,.g6{grid-column:span 12}
+    @media(max-width: 520px){ .g3,.g4,.g5,.g6{grid-column:span 12} }
+    details{border:1px solid var(--line);border-radius:18px;background:rgba(255,255,255,.03);padding:12px 14px}
+    summary{cursor:pointer;font-weight:900}
+    iframe{width:100%;border:1px solid var(--line);border-radius:18px}
+    footer{padding:26px 0;border-top:1px solid rgba(255,255,255,.08);color:var(--muted)}
+    .tiny{font-size:12px;color:var(--muted2)}
+    .badge{
+      display:inline-flex;gap:8px;align-items:center;
+      padding:8px 10px;border-radius:999px;border:1px solid rgba(142,230,210,.25);
+      background:rgba(142,230,210,.08);color:var(--text);font-weight:900;font-size:13px;
     }
-    details{border:1px solid var(--border);border-radius:16px;padding:12px 14px;background:#fff}
-    summary{cursor:pointer;font-weight:850}
-    iframe{width:100%;border:0;border-radius:16px;border:1px solid var(--border)}
-    footer{border-top:1px solid var(--border);padding:26px 0;margin-top:22px}
-    .hr{border:none;border-top:1px solid var(--border);margin:16px 0}
   </style>
 </head>
 
 <body>
+
 <header>
   <div class="wrap">
     <nav>
-      <div>
-        <div class="brand">Øyhuset – Mariehuset</div>
-        <div class="menu" style="margin-top:6px">
-          <a href="#cabin" data-i18n="nav.cabin">Cabin</a>
-          <a href="#gallery" data-i18n="nav.gallery">Gallery</a>
-          <a href="#location" data-i18n="nav.location">Location</a>
-          <a href="#booking" data-i18n="nav.booking">Booking</a>
-          <a href="#faq" data-i18n="nav.faq">FAQ</a>
-          <a href="#contact" data-i18n="nav.contact">Contact</a>
-        </div>
+      <div class="brand">
+        <b>Øyhuset – Mariehuset</b>
+        <span data-i18n="nav.tagline">Helligvær • outside Bodø • Arctic Norway</span>
       </div>
 
-      <div class="langbar" aria-label="Language selector">
+      <div class="navLinks" aria-label="Menu">
+        <a href="#story" data-i18n="nav.story">Story</a>
+        <a href="#experience" data-i18n="nav.experience">Experiences</a>
+        <a href="#gallery" data-i18n="nav.gallery">Gallery</a>
+        <a href="#amenities" data-i18n="nav.amenities">Amenities</a>
+        <a href="#location" data-i18n="nav.location">Location</a>
+        <a href="#booking" data-i18n="nav.booking">Booking</a>
+        <a href="#faq" data-i18n="nav.faq">FAQ</a>
+      </div>
+
+      <div class="langbar">
         <button class="langbtn active" data-lang="en">EN</button>
         <button class="langbtn" data-lang="no">NO</button>
         <button class="langbtn" data-lang="de">DE</button>
@@ -89,435 +174,576 @@
 <main class="wrap">
 
   <!-- HERO -->
-  <section class="grid heroGrid" style="padding-top:22px">
-    <div class="card">
-      <h1 data-i18n="hero.title">Historic island farmhouse in Helligvær</h1>
-      <p class="muted" data-i18n="hero.subtitle">
-        A quiet, authentic North Norwegian island stay — book via Airbnb or Booking.com.
-      </p>
+  <section style="padding-top:18px">
+    <div class="hero">
+      <img class="heroImg" alt="Mariehuset in Helligvær" src="https://a0.muscache.com/im/pictures/hosting/Hosting-U3RheVN1cHBseUxpc3Rpbmc6MTQyMTE5MTcyNjk3MzM1ODE5NQ%3D%3D/original/58a48159-70d2-43c5-bb39-6c32aee597c5.jpeg?im_w=1800">
+      <div class="heroOverlay"></div>
 
-      <div class="pills">
-        <span class="pill" data-i18n="pills.sleeps">Sleeps 6</span>
-        <span class="pill" data-i18n="pills.bedrooms">3 bedrooms</span>
-        <span class="pill" data-i18n="pills.beds">7 beds</span>
-        <span class="pill" data-i18n="pills.bath">1 bathroom</span>
-        <span class="pill" data-i18n="pills.checkin">Self check-in</span>
+      <div class="heroContent">
+        <div class="glass heroCard">
+          <div class="kicker" data-i18n="hero.kicker">Historic island farmhouse</div>
+          <h1 data-i18n="hero.title">Disconnect. Slow down. Feel Helligvær.</h1>
+          <p class="subhead" data-i18n="hero.sub">
+            Built in 1898, Mariehuset blends rustic character with modern comfort—minutes from sea, hikes, and panoramic views toward Lofoten.
+          </p>
+
+          <div class="pillRow">
+            <span class="badge" data-i18n="hero.badge1">1898 • authentic character</span>
+            <span class="badge" data-i18n="hero.badge2">Kayaks & bikes available</span>
+          </div>
+
+          <div class="btnRow">
+            <a class="btn btnPrimary" target="_blank" rel="noopener"
+               href="https://www.airbnb.no/rooms/1421191726973358195?viralityEntryPoint=1&s=76"
+               data-i18n="cta.airbnb">Book on Airbnb</a>
+
+            <!-- Updated booking link format -->
+            <a class="btn" target="_blank" rel="noopener"
+               href="https://www.booking.com/hotel/no/the-island-house-mariehuset-bodo.no.html"
+               data-i18n="cta.booking">Book on Booking.com</a>
+
+            <a class="btn" target="_blank" rel="noopener"
+               href="https://www.google.com/maps/search/?api=1&query=Kortb%C3%B8lgen%208%2C%208095%20Helligv%C3%A6r"
+               data-i18n="cta.maps">Open in Maps</a>
+          </div>
+
+          <div class="tiny" style="margin-top:10px" data-i18n="hero.note">
+            Availability and final price are always shown on Airbnb/Booking.com.
+          </div>
+        </div>
+
+        <div class="card heroCard">
+          <div class="cardInner">
+            <h2 data-i18n="hero.quickTitle">Quick facts</h2>
+            <div class="stats">
+              <div class="stat"><b data-i18n="facts.guests">Up to 6 guests</b><span data-i18n="facts.guestsSub">Entire home</span></div>
+              <div class="stat"><b data-i18n="facts.beds">3 bedrooms • 7 beds</b><span data-i18n="facts.bedsSub">Family & friends</span></div>
+              <div class="stat"><b data-i18n="facts.ferry">~45–60 min express ferry</b><span data-i18n="facts.ferrySub">from Bodø sentrum</span></div>
+              <div class="stat"><b data-i18n="facts.view">Panoramic viewpoints</b><span data-i18n="facts.viewSub">toward Lofoten</span></div>
+            </div>
+            <p class="muted" style="margin-top:12px" data-i18n="hero.quickCopy">
+              This is a place for people who want real island nature, silence, and an authentic north-Norwegian home—more “heritage cabin” than luxury hotel.
+            </p>
+          </div>
+        </div>
+
       </div>
-
-      <div class="ctaRow">
-        <a class="btn btnPrimary" href="https://www.airbnb.no/rooms/1421191726973358195?viralityEntryPoint=1&s=76" target="_blank" rel="noopener" data-i18n="cta.airbnb">Book on Airbnb</a>
-        <a class="btn" href="https://www.booking.com/hotel/no/the-island-house-mariehuset-bodo.html" target="_blank" rel="noopener" data-i18n="cta.booking">Book on Booking.com</a>
-      </div>
-
-      <p class="muted" style="margin-top:10px" data-i18n="hero.note">
-        Live availability and final pricing are shown on Airbnb/Booking.com.
-      </p>
     </div>
-
-    <!-- Hero image: replace with your favorite Airbnb photo URL (or self-host later). -->
-    <img class="heroImg" alt="Mariehuset" src="https://a0.muscache.com/im/pictures/hosting/Hosting-U3RheVN1cHBseUxpc3Rpbmc6MTQyMTE5MTcyNjk3MzM1ODE5NQ%3D%3D/original/58a48159-70d2-43c5-bb39-6c32aee597c5.jpeg?im_w=1200" />
   </section>
 
-  <!-- CABIN -->
-  <section id="cabin">
-    <h2 data-i18n="cabin.title">About the cabin</h2>
-    <div class="grid twoCol">
-      <div class="card">
-        <p><strong data-i18n="cabin.expectTitle">What to expect</strong></p>
-        <ul>
-          <li data-i18n="cabin.expect1">An authentic island home with a warm, historic character.</li>
-          <li data-i18n="cabin.expect2">Great for guests who want nature, sea air, and a quiet stay.</li>
-          <li data-i18n="cabin.expect3">Comfortable base for fishing, hiking, kayaking and island exploring.</li>
-        </ul>
-      </div>
+  <!-- STORY -->
+  <section id="story">
+    <div class="grid two">
+      <div class="card"><div class="cardInner">
+        <h2 data-i18n="story.title">The story</h2>
+        <p class="muted" data-i18n="story.p1">
+          Mariehuset is an 1898 island farmhouse in the Helligvær archipelago, reachable by express ferry from Bodø. It’s a time-travel mix: modern kitchen/bath + original charm, with the quiet “island time” you only get far from the mainland.
+        </p>
+        <p class="muted" data-i18n="story.p2">
+          Start your day with coffee, walk to a high point on the island, and take in a wide 360° view toward Lofoten. In summer, explore islets by kayak; in winter, watch for Northern Lights in the dark Arctic sky.
+        </p>
+      </div></div>
 
-      <div class="card">
-        <p><strong data-i18n="cabin.policiesTitle">Important policies</strong></p>
-        <ul>
-          <li data-i18n="policy.linen">Bed linen + towels are available as an optional add-on (bring your own for a lower price).</li>
-          <li data-i18n="policy.cleaning">Cleaning is not included. Cleaning products are provided for guests.</li>
-          <li data-i18n="policy.pets">No pets or service animals allowed.</li>
-        </ul>
-      </div>
+      <div class="card"><div class="cardInner">
+        <h2 data-i18n="sell.title">Why guests love it</h2>
+        <div class="grid" style="gap:10px">
+          <div class="feature glass">
+            <b data-i18n="sell.f1t">Authentic 1898 home</b>
+            <p data-i18n="sell.f1d">Heritage character, cozy atmosphere, and a true north-Norwegian feel.</p>
+          </div>
+          <div class="feature glass">
+            <b data-i18n="sell.f2t">Island experiences</b>
+            <p data-i18n="sell.f2d">Fishing, hiking, freediving, kayaking—surrounded by hundreds of islands.</p>
+          </div>
+          <div class="feature glass">
+            <b data-i18n="sell.f3t">Aurora & silence</b>
+            <p data-i18n="sell.f3d">Far from city lights—perfect for calm winter nights and Northern Lights watching.</p>
+          </div>
+        </div>
+      </div></div>
     </div>
   </section>
 
-  <!-- GALLERY (swap/extend images as you like) -->
+  <!-- EXPERIENCES -->
+  <section id="experience">
+    <h2 data-i18n="exp.title">Signature experiences</h2>
+    <div class="grid three">
+      <div class="card"><div class="cardInner">
+        <b data-i18n="exp.e1t">Kayak between islets</b>
+        <p class="muted" data-i18n="exp.e1d">Borrow kayaks and explore turquoise shallows, narrow passages, and quiet beaches.</p>
+      </div></div>
+      <div class="card"><div class="cardInner">
+        <b data-i18n="exp.e2t">Catch dinner</b>
+        <p class="muted" data-i18n="exp.e2d">Fish in a famous fishing archipelago—then cook at home in a modern kitchen.</p>
+      </div></div>
+      <div class="card"><div class="cardInner">
+        <b data-i18n="exp.e3t">360° viewpoints</b>
+        <p class="muted" data-i18n="exp.e3d">A short walk brings you to spectacular panoramas—often all the way to Lofoten.</p>
+      </div></div>
+    </div>
+
+    <p class="tiny" style="margin-top:10px" data-i18n="exp.note">
+      Safety note: use of water equipment requires experience and sensible judgment. Conditions can change quickly.
+    </p>
+  </section>
+
+  <!-- GALLERY -->
   <section id="gallery">
     <h2 data-i18n="gallery.title">Gallery</h2>
     <p class="muted" data-i18n="gallery.note">
-      Current photos from your Airbnb listing (best practice: self-host originals later).
+      Photos currently referenced from Airbnb. Best practice is to self-host originals later (Airbnb links can change).
     </p>
 
     <div class="gallery">
-      <img class="gimg g1" alt="Exterior" src="https://a0.muscache.com/im/pictures/hosting/Hosting-U3RheVN1cHBseUxpc3Rpbmc6MTQyMTE5MTcyNjk3MzM1ODE5NQ%3D%3D/original/58a48159-70d2-43c5-bb39-6c32aee597c5.jpeg?im_w=1200" />
-      <img class="gimg g2" alt="View" src="https://a0.muscache.com/im/pictures/miso/Hosting-1421191726973358195/original/fa0ce900-6c2d-4e3d-b87f-15a4331acb54.jpeg?im_w=1200" />
-      <img class="gimg g3" alt="Bedroom" src="https://a0.muscache.com/im/pictures/miso/Hosting-1421191726973358195/original/504dd1e8-95e4-45c1-b09d-4404862d2394.jpeg?im_w=1200" />
-      <img class="gimg g4" alt="Bedroom" src="https://a0.muscache.com/im/pictures/miso/Hosting-1421191726973358195/original/4d3fe11e-de41-4ad9-8cc9-88bbf3a9efc6.jpeg?im_w=1200" />
-      <img class="gimg g5" alt="Room" src="https://a0.muscache.com/im/pictures/hosting/Hosting-1421191726973358195/original/2a3e4314-4b4b-42a0-a670-247f99ec3369.jpeg?im_w=1200" />
-      <img class="gimg g6" alt="Kayak" src="https://a0.muscache.com/im/pictures/hosting/Hosting-U3RheVN1cHBseUxpc3Rpbmc6MTQyMTE5MTcyNjk3MzM1ODE5NQ%3D%3D/original/e3b05014-bf63-4594-afa3-3ecef78413df.jpeg?im_w=1200" />
+      <img class="gimg g1" alt="Exterior" src="https://a0.muscache.com/im/pictures/hosting/Hosting-U3RheVN1cHBseUxpc3Rpbmc6MTQyMTE5MTcyNjk3MzM1ODE5NQ%3D%3D/original/58a48159-70d2-43c5-bb39-6c32aee597c5.jpeg?im_w=1600">
+      <img class="gimg g2" alt="View" src="https://a0.muscache.com/im/pictures/miso/Hosting-1421191726973358195/original/fa0ce900-6c2d-4e3d-b87f-15a4331acb54.jpeg?im_w=1600">
+      <img class="gimg g3" alt="Bedroom" src="https://a0.muscache.com/im/pictures/miso/Hosting-1421191726973358195/original/504dd1e8-95e4-45c1-b09d-4404862d2394.jpeg?im_w=1200">
+      <img class="gimg g4" alt="Bedroom" src="https://a0.muscache.com/im/pictures/miso/Hosting-1421191726973358195/original/4d3fe11e-de41-4ad9-8cc9-88bbf3a9efc6.jpeg?im_w=1200">
+      <img class="gimg g5" alt="Room" src="https://a0.muscache.com/im/pictures/hosting/Hosting-1421191726973358195/original/2a3e4314-4b4b-42a0-a670-247f99ec3369.jpeg?im_w=1200">
+      <img class="gimg g6" alt="Kayak" src="https://a0.muscache.com/im/pictures/hosting/Hosting-U3RheVN1cHBseUxpc3Rpbmc6MTQyMTE5MTcyNjk3MzM1ODE5NQ%3D%3D/original/e3b05014-bf63-4594-afa3-3ecef78413df.jpeg?im_w=1200">
     </div>
+  </section>
+
+  <!-- AMENITIES -->
+  <section id="amenities">
+    <h2 data-i18n="amen.title">Amenities</h2>
+    <div class="grid three">
+      <div class="card"><div class="cardInner">
+        <b data-i18n="amen.a1t">Beach access</b>
+        <p class="muted" data-i18n="amen.a1d">Walk straight to the shoreline and island beaches.</p>
+      </div></div>
+      <div class="card"><div class="cardInner">
+        <b data-i18n="amen.a2t">Kitchen</b>
+        <p class="muted" data-i18n="amen.a2d">Cook comfortably (modern kitchen) — perfect for fresh fish dinners.</p>
+      </div></div>
+      <div class="card"><div class="cardInner">
+        <b data-i18n="amen.a3t">Wi-Fi + laundry</b>
+        <p class="muted" data-i18n="amen.a3d">Wi-Fi, washer and dryer available.</p>
+      </div></div>
+    </div>
+    <p class="tiny" style="margin-top:10px" data-i18n="amen.note">
+      Full amenity list and any updates are always shown on the booking platforms.
+    </p>
   </section>
 
   <!-- LOCATION -->
   <section id="location">
-    <h2 data-i18n="location.title">Location</h2>
-    <div class="grid twoCol">
-      <div class="card">
-        <p><strong data-i18n="location.addressTitle">Address</strong></p>
-        <p class="muted"><span data-i18n="location.address">Kortbølgen 8, 8095 Helligvær, Norway</span></p>
+    <div class="grid two">
+      <div class="card"><div class="cardInner">
+        <h2 data-i18n="loc.title">Location</h2>
+        <p class="muted"><b data-i18n="loc.addrT">Address:</b> <span data-i18n="loc.addr">Kortbølgen 8, 8095 Helligvær, Norway</span></p>
 
-        <p><strong data-i18n="location.getHereTitle">Getting here</strong></p>
-        <p class="muted" data-i18n="location.getHere">
-          Helligvær is outside Bodø. Plan your journey carefully (boat schedules/weather).
+        <h2 style="margin-top:14px" data-i18n="loc.getTitle">Getting here</h2>
+        <p class="muted" data-i18n="loc.getCopy">
+          Take the express ferry from Bodø sentrum terminal area to Helligvær. Plan with weather and timetables.
         </p>
 
-        <div class="ctaRow">
-          <a class="btn" href="https://www.google.com/maps/search/?api=1&query=Kortb%C3%B8lgen%208%2C%208095%20Helligv%C3%A6r" target="_blank" rel="noopener" data-i18n="location.openMaps">
-            Open in Google Maps
-          </a>
+        <div class="btnRow">
+          <a class="btn" target="_blank" rel="noopener"
+             href="https://www.google.com/maps/search/?api=1&query=Kortb%C3%B8lgen%208%2C%208095%20Helligv%C3%A6r"
+             data-i18n="loc.mapsBtn">Open in Google Maps</a>
         </div>
-      </div>
+      </div></div>
 
-      <div class="card">
-        <p class="muted" data-i18n="location.mapNote">Precise map pin:</p>
+      <div class="card"><div class="cardInner">
+        <h2 data-i18n="loc.mapTitle">Precise pin</h2>
         <iframe
           title="Map - Kortbølgen 8, 8095 Helligvær"
-          height="340"
+          height="360"
           loading="lazy"
           referrerpolicy="no-referrer-when-downgrade"
-          src="https://www.google.com/maps?q=Kortb%C3%B8lgen%208%2C%208095%20Helligv%C3%A6r&output=embed">
-        </iframe>
-      </div>
+          src="https://www.google.com/maps?q=Kortb%C3%B8lgen%208%2C%208095%20Helligv%C3%A6r&output=embed"></iframe>
+      </div></div>
     </div>
   </section>
 
   <!-- BOOKING -->
   <section id="booking">
-    <h2 data-i18n="booking.title">Availability & booking</h2>
-    <div class="card">
-      <p><strong data-i18n="booking.howTitle">How to book</strong></p>
-      <ol>
-        <li data-i18n="booking.step1">Click Airbnb or Booking.com below</li>
-        <li data-i18n="booking.step2">Select dates → see total price</li>
-        <li data-i18n="booking.step3">Complete booking on the platform</li>
-      </ol>
+    <div class="card"><div class="cardInner">
+      <h2 data-i18n="book.title">Booking</h2>
+      <p class="muted" data-i18n="book.copy">
+        For live availability, final price, and cancellation terms, please book via the platforms below.
+      </p>
 
-      <div class="ctaRow">
-        <a class="btn btnPrimary" href="https://www.airbnb.no/rooms/1421191726973358195?viralityEntryPoint=1&s=76" target="_blank" rel="noopener" data-i18n="booking.airbnb">
-          Check availability on Airbnb
-        </a>
-        <a class="btn" href="https://www.booking.com/hotel/no/the-island-house-mariehuset-bodo.html" target="_blank" rel="noopener" data-i18n="booking.booking">
-          Check availability on Booking.com
-        </a>
+      <div class="btnRow">
+        <a class="btn btnPrimary" target="_blank" rel="noopener"
+           href="https://www.airbnb.no/rooms/1421191726973358195?viralityEntryPoint=1&s=76"
+           data-i18n="book.airbnb">Check availability on Airbnb</a>
+        <a class="btn" target="_blank" rel="noopener"
+           href="https://www.booking.com/hotel/no/the-island-house-mariehuset-bodo.no.html"
+           data-i18n="book.booking">Check availability on Booking.com</a>
       </div>
 
-      <hr class="hr">
-
-      <p><strong data-i18n="six.title">The 6 questions guests want answered fast</strong></p>
-      <ul>
-        <li data-i18n="six.q1"><strong>Is it available?</strong> Live calendars are on Airbnb/Booking.com.</li>
-        <li data-i18n="six.q2"><strong>What does it cost?</strong> Final price depends on dates; see the platform totals.</li>
-        <li data-i18n="six.q3"><strong>What’s included?</strong> Optional linen/towel sets available; cleaning products provided.</li>
-        <li data-i18n="six.q4"><strong>Where is it?</strong> Kortbølgen 8, 8095 Helligvær (see map).</li>
-        <li data-i18n="six.q5"><strong>Check-in/out?</strong> Details are provided after booking in the platform messages.</li>
-        <li data-i18n="six.q6"><strong>Rules/cancellation?</strong> Shown on the platform you book with.</li>
-      </ul>
-    </div>
+      <div style="margin-top:14px" class="tiny" data-i18n="book.note">
+        Tip: if you want direct bookings later, we can add Stripe + a calendar system — but linking out is safest and easiest today.
+      </div>
+    </div></div>
   </section>
 
-  <!-- FAQ -->
+  <!-- FAQ (rules moved down) -->
   <section id="faq">
     <h2 data-i18n="faq.title">FAQ</h2>
     <div class="grid" style="gap:12px">
-      <details>
-        <summary data-i18n="faq.linen.q">Are bed linen and towels included?</summary>
-        <p class="muted" data-i18n="faq.linen.a">
-          They are optional. Full sets are available for all beds + towels if you choose the add-on. Bring your own for a lower price.
-        </p>
+
+      <details open>
+        <summary data-i18n="faq.q1">How do we get there?</summary>
+        <p class="muted" data-i18n="faq.a1">Use the express ferry from Bodø sentrum area to Helligvær. Always plan with weather and schedules.</p>
       </details>
 
       <details>
-        <summary data-i18n="faq.cleaning.q">Is cleaning included?</summary>
-        <p class="muted" data-i18n="faq.cleaning.a">
-          Cleaning is not included. We provide all cleaning products needed for guests.
-        </p>
+        <summary data-i18n="faq.q2">Is this a modern luxury cabin?</summary>
+        <p class="muted" data-i18n="faq.a2">It’s a historic 1898 house with modern kitchen/bath — authentic charm first, boutique comfort second.</p>
       </details>
 
       <details>
-        <summary data-i18n="faq.pets.q">Are pets or service animals allowed?</summary>
-        <p class="muted" data-i18n="faq.pets.a">
-          No — pets and service animals are not allowed.
-        </p>
+        <summary data-i18n="faq.q3">Are towels and bed linen included?</summary>
+        <p class="muted" data-i18n="faq.a3">Full sets are available, but optional—bring your own if you prefer a lower price.</p>
       </details>
 
       <details>
-        <summary data-i18n="faq.location.q">Where exactly is the cabin?</summary>
-        <p class="muted" data-i18n="faq.location.a">
-          Kortbølgen 8, 8095 Helligvær, Norway. Use the map above for navigation.
-        </p>
+        <summary data-i18n="faq.q4">Is cleaning included?</summary>
+        <p class="muted" data-i18n="faq.a4">Cleaning is not included. Cleaning products are provided for guests.</p>
       </details>
 
       <details>
-        <summary data-i18n="faq.booking.q">Where do we see final price, cancellation and availability?</summary>
-        <p class="muted" data-i18n="faq.booking.a">
-          On Airbnb or Booking.com — those pages always show live availability, total price and the policy that applies.
-        </p>
+        <summary data-i18n="faq.q5">Pets / service animals?</summary>
+        <p class="muted" data-i18n="faq.a5">No pets or service animals are allowed.</p>
       </details>
-    </div>
-  </section>
 
-  <!-- CONTACT -->
-  <section id="contact">
-    <h2 data-i18n="contact.title">Contact</h2>
-    <div class="grid twoCol">
-      <div class="card">
-        <p><strong data-i18n="contact.bestTitle">Best way to reach us</strong></p>
-        <p class="muted" data-i18n="contact.bestText">
-          Please message through Airbnb/Booking.com (fastest + keeps booking info in one place).
-        </p>
-        <div class="ctaRow">
-          <a class="btn btnPrimary" href="https://www.airbnb.no/rooms/1421191726973358195?viralityEntryPoint=1&s=76" target="_blank" rel="noopener" data-i18n="contact.airbnb">Open Airbnb listing</a>
-          <a class="btn" href="https://www.booking.com/hotel/no/the-island-house-mariehuset-bodo.html" target="_blank" rel="noopener" data-i18n="contact.booking">Open Booking.com listing</a>
-        </div>
-      </div>
-
-      <div class="card">
-        <p><strong data-i18n="contact.optionalTitle">Optional direct contact</strong></p>
-        <p class="muted" data-i18n="contact.optionalText">
-          If you want to show direct contact here, replace the placeholders below:
-        </p>
-        <ul class="muted">
-          <li>Email: you@domain.com</li>
-          <li>Phone/WhatsApp: +47 …</li>
-        </ul>
-      </div>
     </div>
   </section>
 
   <footer>
-    <div class="muted">© <span id="y"></span> Øyhuset – Mariehuset. <span data-i18n="footer.note">Booking handled via Airbnb and Booking.com.</span></div>
+    <div class="wrap" style="padding:0">
+      <div>© <span id="y"></span> Øyhuset – Mariehuset</div>
+      <div class="tiny" data-i18n="foot.note">Bookings handled via Airbnb and Booking.com.</div>
+    </div>
   </footer>
+
 </main>
 
 <script>
-  document.getElementById('y').textContent = new Date().getFullYear();
+  document.getElementById("y").textContent = new Date().getFullYear();
 
-  const translations = {
+  const t = {
     en: {
-      "nav.cabin":"Cabin","nav.gallery":"Gallery","nav.location":"Location","nav.booking":"Booking","nav.faq":"FAQ","nav.contact":"Contact",
-      "hero.title":"Historic island farmhouse in Helligvær",
-      "hero.subtitle":"A quiet, authentic North Norwegian island stay — book via Airbnb or Booking.com.",
-      "hero.note":"Live availability and final pricing are shown on Airbnb/Booking.com.",
-      "pills.sleeps":"Sleeps 6","pills.bedrooms":"3 bedrooms","pills.beds":"7 beds","pills.bath":"1 bathroom","pills.checkin":"Self check-in",
-      "cta.airbnb":"Book on Airbnb","cta.booking":"Book on Booking.com",
-      "cabin.title":"About the cabin","cabin.expectTitle":"What to expect",
-      "cabin.expect1":"An authentic island home with a warm, historic character.",
-      "cabin.expect2":"Great for guests who want nature, sea air, and a quiet stay.",
-      "cabin.expect3":"Comfortable base for fishing, hiking, kayaking and island exploring.",
-      "cabin.policiesTitle":"Important policies",
-      "policy.linen":"Bed linen + towels are available as an optional add-on (bring your own for a lower price).",
-      "policy.cleaning":"Cleaning is not included. Cleaning products are provided for guests.",
-      "policy.pets":"No pets or service animals allowed.",
-      "gallery.title":"Gallery","gallery.note":"Current photos from your Airbnb listing (best practice: self-host originals later).",
-      "location.title":"Location","location.addressTitle":"Address","location.address":"Kortbølgen 8, 8095 Helligvær, Norway",
-      "location.getHereTitle":"Getting here","location.getHere":"Helligvær is outside Bodø. Plan your journey carefully (boat schedules/weather).",
-      "location.openMaps":"Open in Google Maps","location.mapNote":"Precise map pin:",
-      "booking.title":"Availability & booking","booking.howTitle":"How to book",
-      "booking.step1":"Click Airbnb or Booking.com below","booking.step2":"Select dates → see total price","booking.step3":"Complete booking on the platform",
-      "booking.airbnb":"Check availability on Airbnb","booking.booking":"Check availability on Booking.com",
-      "six.title":"The 6 questions guests want answered fast",
-      "six.q1":"<strong>Is it available?</strong> Live calendars are on Airbnb/Booking.com.",
-      "six.q2":"<strong>What does it cost?</strong> Final price depends on dates; see the platform totals.",
-      "six.q3":"<strong>What’s included?</strong> Optional linen/towel sets available; cleaning products provided.",
-      "six.q4":"<strong>Where is it?</strong> Kortbølgen 8, 8095 Helligvær (see map).",
-      "six.q5":"<strong>Check-in/out?</strong> Details are provided after booking in the platform messages.",
-      "six.q6":"<strong>Rules/cancellation?</strong> Shown on the platform you book with.",
+      "nav.tagline":"Helligvær • outside Bodø • Arctic Norway",
+      "nav.story":"Story","nav.experience":"Experiences","nav.gallery":"Gallery","nav.amenities":"Amenities","nav.location":"Location","nav.booking":"Booking","nav.faq":"FAQ",
+
+      "hero.kicker":"Historic island farmhouse",
+      "hero.title":"Disconnect. Slow down. Feel Helligvær.",
+      "hero.sub":"Built in 1898, Mariehuset blends rustic character with modern comfort—minutes from sea, hikes, and panoramic views toward Lofoten.",
+      "hero.badge1":"1898 • authentic character",
+      "hero.badge2":"Kayaks & bikes available",
+      "hero.note":"Availability and final price are always shown on Airbnb/Booking.com.",
+      "hero.quickTitle":"Quick facts",
+      "hero.quickCopy":"This is a place for people who want real island nature, silence, and an authentic north-Norwegian home—more “heritage cabin” than luxury hotel.",
+
+      "facts.guests":"Up to 6 guests","facts.guestsSub":"Entire home",
+      "facts.beds":"3 bedrooms • 7 beds","facts.bedsSub":"Family & friends",
+      "facts.ferry":"~45–60 min express ferry","facts.ferrySub":"from Bodø sentrum",
+      "facts.view":"Panoramic viewpoints","facts.viewSub":"toward Lofoten",
+
+      "cta.airbnb":"Book on Airbnb",
+      "cta.booking":"Book on Booking.com",
+      "cta.maps":"Open in Maps",
+
+      "story.title":"The story",
+      "story.p1":"Mariehuset is an 1898 island farmhouse in the Helligvær archipelago, reachable by express ferry from Bodø. It’s a time-travel mix: modern kitchen/bath + original charm, with the quiet “island time” you only get far from the mainland.",
+      "story.p2":"Start your day with coffee, walk to a high point on the island, and take in a wide 360° view toward Lofoten. In summer, explore islets by kayak; in winter, watch for Northern Lights in the dark Arctic sky.",
+
+      "sell.title":"Why guests love it",
+      "sell.f1t":"Authentic 1898 home","sell.f1d":"Heritage character, cozy atmosphere, and a true north-Norwegian feel.",
+      "sell.f2t":"Island experiences","sell.f2d":"Fishing, hiking, freediving, kayaking—surrounded by hundreds of islands.",
+      "sell.f3t":"Aurora & silence","sell.f3d":"Far from city lights—perfect for calm winter nights and Northern Lights watching.",
+
+      "exp.title":"Signature experiences",
+      "exp.e1t":"Kayak between islets","exp.e1d":"Borrow kayaks and explore turquoise shallows, narrow passages, and quiet beaches.",
+      "exp.e2t":"Catch dinner","exp.e2d":"Fish in a famous fishing archipelago—then cook at home in a modern kitchen.",
+      "exp.e3t":"360° viewpoints","exp.e3d":"A short walk brings you to spectacular panoramas—often all the way to Lofoten.",
+      "exp.note":"Safety note: use of water equipment requires experience and sensible judgment. Conditions can change quickly.",
+
+      "gallery.title":"Gallery",
+      "gallery.note":"Photos currently referenced from Airbnb. Best practice is to self-host originals later (Airbnb links can change).",
+
+      "amen.title":"Amenities",
+      "amen.a1t":"Beach access","amen.a1d":"Walk straight to the shoreline and island beaches.",
+      "amen.a2t":"Kitchen","amen.a2d":"Cook comfortably (modern kitchen) — perfect for fresh fish dinners.",
+      "amen.a3t":"Wi-Fi + laundry","amen.a3d":"Wi-Fi, washer and dryer available.",
+      "amen.note":"Full amenity list and any updates are always shown on the booking platforms.",
+
+      "loc.title":"Location",
+      "loc.addrT":"Address:",
+      "loc.addr":"Kortbølgen 8, 8095 Helligvær, Norway",
+      "loc.getTitle":"Getting here",
+      "loc.getCopy":"Take the express ferry from Bodø sentrum terminal area to Helligvær. Plan with weather and timetables.",
+      "loc.mapsBtn":"Open in Google Maps",
+      "loc.mapTitle":"Precise pin",
+
+      "book.title":"Booking",
+      "book.copy":"For live availability, final price, and cancellation terms, please book via the platforms below.",
+      "book.airbnb":"Check availability on Airbnb",
+      "book.booking":"Check availability on Booking.com",
+      "book.note":"Tip: if you want direct bookings later, we can add Stripe + a calendar system — but linking out is safest and easiest today.",
+
       "faq.title":"FAQ",
-      "faq.linen.q":"Are bed linen and towels included?",
-      "faq.linen.a":"They are optional. Full sets are available for all beds + towels if you choose the add-on. Bring your own for a lower price.",
-      "faq.cleaning.q":"Is cleaning included?",
-      "faq.cleaning.a":"Cleaning is not included. We provide all cleaning products needed for guests.",
-      "faq.pets.q":"Are pets or service animals allowed?",
-      "faq.pets.a":"No — pets and service animals are not allowed.",
-      "faq.location.q":"Where exactly is the cabin?",
-      "faq.location.a":"Kortbølgen 8, 8095 Helligvær, Norway. Use the map above for navigation.",
-      "faq.booking.q":"Where do we see final price, cancellation and availability?",
-      "faq.booking.a":"On Airbnb or Booking.com — those pages always show live availability, total price and the policy that applies.",
-      "contact.title":"Contact",
-      "contact.bestTitle":"Best way to reach us",
-      "contact.bestText":"Please message through Airbnb/Booking.com (fastest + keeps booking info in one place).",
-      "contact.airbnb":"Open Airbnb listing","contact.booking":"Open Booking.com listing",
-      "contact.optionalTitle":"Optional direct contact",
-      "contact.optionalText":"If you want to show direct contact here, replace the placeholders below:",
-      "footer.note":"Booking handled via Airbnb and Booking.com."
+      "faq.q1":"How do we get there?",
+      "faq.a1":"Use the express ferry from Bodø sentrum area to Helligvær. Always plan with weather and schedules.",
+      "faq.q2":"Is this a modern luxury cabin?",
+      "faq.a2":"It’s a historic 1898 house with modern kitchen/bath — authentic charm first, boutique comfort second.",
+      "faq.q3":"Are towels and bed linen included?",
+      "faq.a3":"Full sets are available, but optional—bring your own if you prefer a lower price.",
+      "faq.q4":"Is cleaning included?",
+      "faq.a4":"Cleaning is not included. Cleaning products are provided for guests.",
+      "faq.q5":"Pets / service animals?",
+      "faq.a5":"No pets or service animals are allowed.",
+
+      "foot.note":"Bookings handled via Airbnb and Booking.com."
     },
 
+    // For NO/DE/FR: keep it simple and readable (we can refine translations later)
     no: {
-      "nav.cabin":"Hytta","nav.gallery":"Bilder","nav.location":"Kart","nav.booking":"Booking","nav.faq":"FAQ","nav.contact":"Kontakt",
-      "hero.title":"Autentisk øyhus i Helligvær",
-      "hero.subtitle":"Et rolig, ekte nordnorsk øy-opphold — book via Airbnb eller Booking.com.",
-      "hero.note":"Ledig kapasitet og endelig pris vises alltid på Airbnb/Booking.com.",
-      "pills.sleeps":"Plass til 6","pills.bedrooms":"3 soverom","pills.beds":"7 senger","pills.bath":"1 bad","pills.checkin":"Selvinnsjekk",
-      "cta.airbnb":"Book på Airbnb","cta.booking":"Book på Booking.com",
-      "cabin.title":"Om stedet","cabin.expectTitle":"Hva du kan forvente",
-      "cabin.expect1":"Et ekte øyhus med varm, historisk karakter.",
-      "cabin.expect2":"Passer for deg som vil ha natur, sjøluft og et rolig opphold.",
-      "cabin.expect3":"Fin base for fiske, turer, kajakk og øyliv.",
-      "cabin.policiesTitle":"Viktige punkter",
-      "policy.linen":"Sengetøy + håndklær er valgfritt tillegg (ta med selv for lavere pris).",
-      "policy.cleaning":"Vask er ikke inkludert. Vi har alle rengjøringsmidler tilgjengelig for gjestene.",
-      "policy.pets":"Ingen dyr eller service-/assistansehund er tillatt.",
-      "gallery.title":"Bilder","gallery.note":"Nåværende bilder fra Airbnb-listingen (best praksis: legg originale bilder på egen nettside senere).",
-      "location.title":"Kart og adresse","location.addressTitle":"Adresse","location.address":"Kortbølgen 8, 8095 Helligvær",
-      "location.getHereTitle":"Slik kommer du deg hit","location.getHere":"Helligvær ligger utenfor Bodø. Planlegg reisen (båtruter/vær).",
-      "location.openMaps":"Åpne i Google Maps","location.mapNote":"Presis kartpinne:",
-      "booking.title":"Ledighet og booking","booking.howTitle":"Slik booker du",
-      "booking.step1":"Trykk på Airbnb eller Booking.com under","booking.step2":"Velg datoer → se totalpris","booking.step3":"Fullfør bookingen på plattformen",
-      "booking.airbnb":"Sjekk ledighet på Airbnb","booking.booking":"Sjekk ledighet på Booking.com",
-      "six.title":"De 6 spørsmålene gjester vil ha svar på raskt",
-      "six.q1":"<strong>Er det ledig?</strong> Live kalender ligger på Airbnb/Booking.com.",
-      "six.q2":"<strong>Hva koster det?</strong> Totalpris avhenger av datoer; se plattformen.",
-      "six.q3":"<strong>Hva er inkludert?</strong> Valgfritt sengetøy/håndklær; rengjøringsmidler er tilgjengelig.",
-      "six.q4":"<strong>Hvor er det?</strong> Kortbølgen 8, 8095 Helligvær (se kart).",
-      "six.q5":"<strong>Innsjekk/utsjekk?</strong> Detaljer gis etter booking i meldinger på plattformen.",
-      "six.q6":"<strong>Regler/avbestilling?</strong> Visning og vilkår følger plattformen du booker via.",
+      "nav.tagline":"Helligvær • utenfor Bodø • Arktisk Norge",
+      "nav.story":"Historie","nav.experience":"Opplevelser","nav.gallery":"Bilder","nav.amenities":"Fasiliteter","nav.location":"Kart","nav.booking":"Booking","nav.faq":"FAQ",
+
+      "hero.kicker":"Historisk øyhus",
+      "hero.title":"Koble av. Senk tempoet. Kjenn Helligvær.",
+      "hero.sub":"Bygget i 1898 – rustikk sjarm med moderne komfort, nær sjø, turer og utsikt mot Lofoten.",
+      "hero.badge1":"1898 • autentisk",
+      "hero.badge2":"Kajakk og sykler",
+      "hero.note":"Ledighet og endelig pris vises alltid på Airbnb/Booking.com.",
+      "hero.quickTitle":"Kjappe fakta",
+      "hero.quickCopy":"Dette er for deg som vil ha ekte øyliv, stillhet og en autentisk nordnorsk opplevelse.",
+
+      "facts.guests":"Inntil 6 gjester","facts.guestsSub":"Hele huset",
+      "facts.beds":"3 soverom • 7 senger","facts.bedsSub":"Familie/venner",
+      "facts.ferry":"~45–60 min hurtigbåt","facts.ferrySub":"fra Bodø sentrum",
+      "facts.view":"Panoramautsikt","facts.viewSub":"mot Lofoten",
+
+      "cta.airbnb":"Book på Airbnb",
+      "cta.booking":"Book på Booking.com",
+      "cta.maps":"Åpne i kart",
+
+      "story.title":"Historien",
+      "story.p1":"Mariehuset er et øyhus fra 1898 i Helligvær, med hurtigbåt fra Bodø. Moderne kjøkken/bad – og ellers masse original sjarm.",
+      "story.p2":"Morgenskaffe + kort tur opp på øya gir stor utsikt. Sommer: kajakk mellom holmer. Vinter: nordlys og stillhet.",
+
+      "sell.title":"Hvorfor gjester liker det",
+      "sell.f1t":"Ekte 1898-hus","sell.f1d":"Historie, varme og særpreg.",
+      "sell.f2t":"Opplevelser i øyriket","sell.f2d":"Fiske, tur, fridykking, kajakk – omgitt av øyer.",
+      "sell.f3t":"Nordlys & ro","sell.f3d":"Lite lysforurensing – perfekte vinterkvelder.",
+
+      "exp.title":"Signaturopplevelser",
+      "exp.e1t":"Kajakk mellom holmer","exp.e1d":"Utforsk sund, strender og stille viker.",
+      "exp.e2t":"Fang middag","exp.e2d":"Fiske i et kjent fiskevær – og lag maten hjemme.",
+      "exp.e3t":"Utsiktspunkt","exp.e3d":"Kort tur – stor belønning, ofte helt til Lofoten.",
+      "exp.note":"Sikkerhet: bruk av vannutstyr krever erfaring og god dømmekraft.",
+
+      "gallery.title":"Bilder",
+      "gallery.note":"Bildene er lenket fra Airbnb (anbefalt å legge originale bilder på egen hosting senere).",
+
+      "amen.title":"Fasiliteter",
+      "amen.a1t":"Strand-/sjøtilgang","amen.a1d":"Kort vei til sjøen og små strender.",
+      "amen.a2t":"Kjøkken","amen.a2d":"Lag mat komfortabelt – perfekt for fersk fisk.",
+      "amen.a3t":"Wi-Fi + vask","amen.a3d":"Wi-Fi, vaskemaskin og tørketrommel.",
+      "amen.note":"Full oversikt og oppdateringer står alltid på bookingplattformene.",
+
+      "loc.title":"Kart",
+      "loc.addrT":"Adresse:",
+      "loc.addr":"Kortbølgen 8, 8095 Helligvær",
+      "loc.getTitle":"Slik kommer du deg hit",
+      "loc.getCopy":"Ta hurtigbåt fra Bodø sentrum til Helligvær. Planlegg med vær og ruter.",
+      "loc.mapsBtn":"Åpne i Google Maps",
+      "loc.mapTitle":"Presis pin",
+
+      "book.title":"Booking",
+      "book.copy":"For ledighet, totalpris og avbestilling: book via plattformene under.",
+      "book.airbnb":"Sjekk ledighet på Airbnb",
+      "book.booking":"Sjekk ledighet på Booking.com",
+      "book.note":"Tips: Senere kan vi legge til direktebooking (Stripe + kalender), men lenking ut er enklest nå.",
+
       "faq.title":"FAQ",
-      "faq.linen.q":"Er sengetøy og håndklær inkludert?",
-      "faq.linen.a":"Det er valgfritt. Vi har komplette sett for alle senger + håndklær som tillegg. Ta med selv for lavere pris.",
-      "faq.cleaning.q":"Er vask inkludert?",
-      "faq.cleaning.a":"Vask er ikke inkludert. Vi har alle rengjøringsprodukter tilgjengelig for gjestene.",
-      "faq.pets.q":"Er dyr eller service-/assistansehund tillatt?",
-      "faq.pets.a":"Nei — dyr og service-/assistansehund er ikke tillatt.",
-      "faq.location.q":"Hvor ligger huset nøyaktig?",
-      "faq.location.a":"Kortbølgen 8, 8095 Helligvær. Bruk kartet over for navigasjon.",
-      "faq.booking.q":"Hvor ser vi endelig pris, avbestilling og ledighet?",
-      "faq.booking.a":"På Airbnb/Booking.com — der vises live ledighet, totalpris og gjeldende vilkår.",
-      "contact.title":"Kontakt",
-      "contact.bestTitle":"Beste kontaktmåte",
-      "contact.bestText":"Send oss gjerne melding via Airbnb/Booking.com (raskest + alt på samme sted).",
-      "contact.airbnb":"Åpne Airbnb-listing","contact.booking":"Åpne Booking.com-listing",
-      "contact.optionalTitle":"Valgfri direkte kontakt",
-      "contact.optionalText":"Hvis du vil vise direkte kontakt her, bytt ut plassholderne under:",
-      "footer.note":"Booking håndteres via Airbnb og Booking.com."
+      "faq.q1":"Hvordan kommer vi oss dit?",
+      "faq.a1":"Hurtigbåt fra Bodø sentrum til Helligvær. Planlegg alltid med vær og ruter.",
+      "faq.q2":"Er dette en moderne luksushytte?",
+      "faq.a2":"Det er et historisk 1898-hus med moderne kjøkken/bad – autentisk sjarm først.",
+      "faq.q3":"Er håndklær og sengetøy inkludert?",
+      "faq.a3":"Det er valgfritt. Fullt sett kan ordnes, men du kan ta med selv for lavere pris.",
+      "faq.q4":"Er vask inkludert?",
+      "faq.a4":"Vask er ikke inkludert. Rengjøringsmidler er tilgjengelig.",
+      "faq.q5":"Dyr / servicehund?",
+      "faq.a5":"Ingen dyr eller service-/assistansehund er tillatt.",
+
+      "foot.note":"Booking håndteres via Airbnb og Booking.com."
     },
 
     de: {
-      "nav.cabin":"Haus","nav.gallery":"Fotos","nav.location":"Lage","nav.booking":"Buchung","nav.faq":"FAQ","nav.contact":"Kontakt",
-      "hero.title":"Authentisches Inselhaus in Helligvær",
-      "hero.subtitle":"Ruhig, nordnorwegisch, direkt über Airbnb oder Booking.com buchbar.",
-      "hero.note":"Verfügbarkeit und Endpreis sehen Sie immer auf Airbnb/Booking.com.",
-      "pills.sleeps":"Für 6 Gäste","pills.bedrooms":"3 Schlafzimmer","pills.beds":"7 Betten","pills.bath":"1 Bad","pills.checkin":"Self-Check-in",
-      "cta.airbnb":"Auf Airbnb buchen","cta.booking":"Auf Booking.com buchen",
-      "cabin.title":"Über das Haus","cabin.expectTitle":"Was Sie erwartet",
-      "cabin.expect1":"Ein echtes Inselhaus mit warmem, historischem Charakter.",
-      "cabin.expect2":"Ideal für Natur, Meeresluft und Ruhe.",
-      "cabin.expect3":"Gute Basis für Angeln, Wandern, Kajak und Insel-Erkundung.",
-      "cabin.policiesTitle":"Wichtige Hinweise",
-      "policy.linen":"Bettwäsche + Handtücher optional (für einen günstigeren Preis bitte selbst mitbringen).",
-      "policy.cleaning":"Reinigung ist nicht inklusive. Reinigungsmittel sind für Gäste vorhanden.",
-      "policy.pets":"Keine Haustiere oder Assistenztiere erlaubt.",
-      "gallery.title":"Fotos","gallery.note":"Aktuelle Fotos aus der Airbnb-Anzeige (empfohlen: Originale später selbst hosten).",
-      "location.title":"Lage","location.addressTitle":"Adresse","location.address":"Kortbølgen 8, 8095 Helligvær, Norwegen",
-      "location.getHereTitle":"Anreise","location.getHere":"Helligvær liegt außerhalb von Bodø. Bitte Reise gut planen (Bootsfahrpläne/Wetter).",
-      "location.openMaps":"In Google Maps öffnen","location.mapNote":"Genauer Pin:",
-      "booking.title":"Verfügbarkeit & Buchung","booking.howTitle":"So buchen Sie",
-      "booking.step1":"Unten auf Airbnb oder Booking.com klicken","booking.step2":"Daten wählen → Gesamtpreis sehen","booking.step3":"Buchung auf der Plattform abschließen",
-      "booking.airbnb":"Verfügbarkeit auf Airbnb prüfen","booking.booking":"Verfügbarkeit auf Booking.com prüfen",
-      "six.title":"Die 6 wichtigsten Fragen – kurz beantwortet",
-      "six.q1":"<strong>Ist es verfügbar?</strong> Live-Kalender auf Airbnb/Booking.com.",
-      "six.q2":"<strong>Was kostet es?</strong> Endpreis hängt von den Daten ab; siehe Plattform.",
-      "six.q3":"<strong>Was ist enthalten?</strong> Bettwäsche/Handtücher optional; Reinigungsmittel vorhanden.",
-      "six.q4":"<strong>Wo ist es?</strong> Kortbølgen 8, 8095 Helligvær (siehe Karte).",
-      "six.q5":"<strong>Check-in/out?</strong> Details nach Buchung in den Plattform-Nachrichten.",
-      "six.q6":"<strong>Regeln/Storno?</strong> Gilt gemäß der Plattform, über die Sie buchen.",
+      "nav.tagline":"Helligvær • bei Bodø • Arktisches Norwegen",
+      "nav.story":"Story","nav.experience":"Erlebnisse","nav.gallery":"Galerie","nav.amenities":"Ausstattung","nav.location":"Lage","nav.booking":"Buchung","nav.faq":"FAQ",
+
+      "hero.kicker":"Historisches Inselhaus",
+      "hero.title":"Abschalten. Runterkommen. Helligvær spüren.",
+      "hero.sub":"Baujahr 1898 – rustikaler Charme mit modernem Komfort, nahe Meer, Wanderungen und Blick Richtung Lofoten.",
+      "hero.badge1":"1898 • authentisch",
+      "hero.badge2":"Kajaks & Fahrräder",
+      "hero.note":"Verfügbarkeit und Endpreis stehen immer auf Airbnb/Booking.com.",
+      "hero.quickTitle":"Kurz & knapp",
+      "hero.quickCopy":"Für Gäste, die Natur, Stille und ein echtes nordnorwegisches Inselhaus suchen.",
+
+      "facts.guests":"Bis 6 Gäste","facts.guestsSub":"Ganzes Haus",
+      "facts.beds":"3 Schlafzimmer • 7 Betten","facts.bedsSub":"Familie & Freunde",
+      "facts.ferry":"~45–60 Min. Expressfähre","facts.ferrySub":"ab Bodø Zentrum",
+      "facts.view":"Panoramablicke","facts.viewSub":"Richtung Lofoten",
+
+      "cta.airbnb":"Über Airbnb buchen",
+      "cta.booking":"Über Booking.com buchen",
+      "cta.maps":"In Karten öffnen",
+
+      "story.title":"Die Geschichte",
+      "story.p1":"Mariehuset ist ein Inselbauernhaus von 1898 in Helligvær, erreichbar per Expressfähre ab Bodø. Moderne Küche/Bad + originaler Charakter.",
+      "story.p2":"Morgenkaffee, kurzer Spaziergang zum Aussichtspunkt, Sommer: Kajak. Winter: Nordlichter und Ruhe.",
+
+      "sell.title":"Warum Gäste es lieben",
+      "sell.f1t":"Authentisches Haus von 1898","sell.f1d":"Geschichte, Wärme und Charakter.",
+      "sell.f2t":"Insel-Erlebnisse","sell.f2d":"Angeln, Wandern, (Frei-)Tauchen, Kajak – umgeben von Inseln.",
+      "sell.f3t":"Nordlichter & Stille","sell.f3d":"Wenig Lichtverschmutzung – perfekte Winterabende.",
+
+      "exp.title":"Signature-Erlebnisse",
+      "exp.e1t":"Kajak zwischen Inselchen","exp.e1d":"Sunde, kleine Strände und stille Buchten entdecken.",
+      "exp.e2t":"Abendessen fangen","exp.e2d":"Angeln im Archipel – und in der Küche zubereiten.",
+      "exp.e3t":"360° Aussicht","exp.e3d":"Kurzer Weg – große Aussicht, oft bis zu den Lofoten.",
+      "exp.note":"Hinweis: Wassersport erfordert Erfahrung und umsichtiges Verhalten.",
+
+      "gallery.title":"Galerie",
+      "gallery.note":"Fotos sind derzeit von Airbnb verlinkt (später am besten selbst hosten).",
+
+      "amen.title":"Ausstattung",
+      "amen.a1t":"Zugang zum Strand/Meer","amen.a1d":"Kurzer Weg ans Wasser und zu kleinen Stränden.",
+      "amen.a2t":"Küche","amen.a2d":"Bequem kochen – ideal für frischen Fisch.",
+      "amen.a3t":"WLAN + Wäsche","amen.a3d":"WLAN, Waschmaschine und Trockner.",
+      "amen.note":"Die vollständige Ausstattungsliste steht auf den Buchungsplattformen.",
+
+      "loc.title":"Lage",
+      "loc.addrT":"Adresse:",
+      "loc.addr":"Kortbølgen 8, 8095 Helligvær, Norwegen",
+      "loc.getTitle":"Anreise",
+      "loc.getCopy":"Expressfähre ab Bodø Zentrum nach Helligvær. Wetter und Fahrplan beachten.",
+      "loc.mapsBtn":"In Google Maps öffnen",
+      "loc.mapTitle":"Exakter Pin",
+
+      "book.title":"Buchung",
+      "book.copy":"Für Live-Verfügbarkeit, Gesamtpreis und Storno: bitte über die Plattformen buchen.",
+      "book.airbnb":"Verfügbarkeit auf Airbnb prüfen",
+      "book.booking":"Verfügbarkeit auf Booking.com prüfen",
+      "book.note":"Tipp: Später können wir Direktbuchung (Stripe + Kalender) ergänzen.",
+
       "faq.title":"FAQ",
-      "faq.linen.q":"Sind Bettwäsche und Handtücher inklusive?",
-      "faq.linen.a":"Optional. Vollständige Sets für alle Betten + Handtücher sind als Add-on verfügbar. Für günstigeren Preis bitte selbst mitbringen.",
-      "faq.cleaning.q":"Ist die Endreinigung inklusive?",
-      "faq.cleaning.a":"Nein. Reinigungsmittel sind vorhanden, Gäste reinigen selbst.",
-      "faq.pets.q":"Sind Haustiere oder Assistenztiere erlaubt?",
-      "faq.pets.a":"Nein — Haustiere und Assistenztiere sind nicht erlaubt.",
-      "faq.location.q":"Wo genau befindet sich das Haus?",
-      "faq.location.a":"Kortbølgen 8, 8095 Helligvær. Nutzen Sie die Karte oben zur Navigation.",
-      "faq.booking.q":"Wo sehe ich Endpreis, Storno und Verfügbarkeit?",
-      "faq.booking.a":"Auf Airbnb/Booking.com — dort stehen Live-Verfügbarkeit, Gesamtpreis und Bedingungen.",
-      "contact.title":"Kontakt",
-      "contact.bestTitle":"Am besten erreichbar",
-      "contact.bestText":"Bitte über Airbnb/Booking.com schreiben (am schnellsten + alles an einem Ort).",
-      "contact.airbnb":"Airbnb-Anzeige öffnen","contact.booking":"Booking.com-Anzeige öffnen",
-      "contact.optionalTitle":"Optional direkter Kontakt",
-      "contact.optionalText":"Wenn Sie direkten Kontakt anzeigen möchten, ersetzen Sie die Platzhalter unten:",
-      "footer.note":"Buchung erfolgt über Airbnb und Booking.com."
+      "faq.q1":"Wie kommen wir hin?",
+      "faq.a1":"Expressfähre ab Bodø Zentrum nach Helligvær. Wetter und Fahrplan beachten.",
+      "faq.q2":"Ist das ein modernes Luxushaus?",
+      "faq.a2":"Historisch (1898) mit moderner Küche/Bad – authentischer Charme steht im Vordergrund.",
+      "faq.q3":"Handtücher & Bettwäsche inklusive?",
+      "faq.a3":"Optional verfügbar. Für günstigere Option gerne selbst mitbringen.",
+      "faq.q4":"Reinigung inklusive?",
+      "faq.a4":"Reinigung ist nicht inklusive. Reinigungsmittel sind vorhanden.",
+      "faq.q5":"Haustiere / Assistenztiere?",
+      "faq.a5":"Keine Haustiere oder Assistenztiere erlaubt.",
+
+      "foot.note":"Buchung über Airbnb und Booking.com."
     },
 
     fr: {
-      "nav.cabin":"Maison","nav.gallery":"Photos","nav.location":"Localisation","nav.booking":"Réservation","nav.faq":"FAQ","nav.contact":"Contact",
-      "hero.title":"Maison authentique sur l’île de Helligvær",
-      "hero.subtitle":"Calme, nature et atmosphère nord-norvégienne — réservez via Airbnb ou Booking.com.",
-      "hero.note":"La disponibilité et le prix final sont affichés sur Airbnb/Booking.com.",
-      "pills.sleeps":"Jusqu’à 6 personnes","pills.bedrooms":"3 chambres","pills.beds":"7 lits","pills.bath":"1 salle de bain","pills.checkin":"Arrivée autonome",
-      "cta.airbnb":"Réserver sur Airbnb","cta.booking":"Réserver sur Booking.com",
-      "cabin.title":"À propos","cabin.expectTitle":"À quoi s’attendre",
-      "cabin.expect1":"Une vraie maison d’île avec un caractère chaleureux et historique.",
-      "cabin.expect2":"Idéal pour la nature, l’air marin et le calme.",
-      "cabin.expect3":"Bonne base pour pêche, randonnées, kayak et découverte des îles.",
-      "cabin.policiesTitle":"Politiques importantes",
-      "policy.linen":"Draps + serviettes en option (apportez les vôtres pour un prix plus bas).",
-      "policy.cleaning":"Le ménage n’est pas inclus. Produits de nettoyage fournis.",
-      "policy.pets":"Animaux et chiens d’assistance non autorisés.",
-      "gallery.title":"Photos","gallery.note":"Photos actuelles de l’annonce Airbnb (recommandé : héberger vos originaux plus tard).",
-      "location.title":"Localisation","location.addressTitle":"Adresse","location.address":"Kortbølgen 8, 8095 Helligvær, Norvège",
-      "location.getHereTitle":"Accès","location.getHere":"Helligvær est au large de Bodø. Merci de bien planifier (horaires bateau/météo).",
-      "location.openMaps":"Ouvrir dans Google Maps","location.mapNote":"Point précis :",
-      "booking.title":"Disponibilité & réservation","booking.howTitle":"Comment réserver",
-      "booking.step1":"Cliquez sur Airbnb ou Booking.com ci-dessous","booking.step2":"Choisissez les dates → voir le prix total","booking.step3":"Finalisez sur la plateforme",
-      "booking.airbnb":"Voir la disponibilité sur Airbnb","booking.booking":"Voir la disponibilité sur Booking.com",
-      "six.title":"Les 6 questions essentielles",
-      "six.q1":"<strong>Disponible ?</strong> Calendriers en direct sur Airbnb/Booking.com.",
-      "six.q2":"<strong>Prix ?</strong> Le prix final dépend des dates ; voir le total sur la plateforme.",
-      "six.q3":"<strong>Inclus ?</strong> Draps/serviettes en option ; produits de nettoyage fournis.",
-      "six.q4":"<strong>Où ?</strong> Kortbølgen 8, 8095 Helligvær (voir carte).",
-      "six.q5":"<strong>Arrivée/départ ?</strong> Détails après réservation via messages de la plateforme.",
-      "six.q6":"<strong>Règles/annulation ?</strong> Selon la plateforme de réservation.",
+      "nav.tagline":"Helligvær • près de Bodø • Norvège arctique",
+      "nav.story":"Histoire","nav.experience":"Expériences","nav.gallery":"Galerie","nav.amenities":"Équipements","nav.location":"Localisation","nav.booking":"Réservation","nav.faq":"FAQ",
+
+      "hero.kicker":"Maison d’île historique",
+      "hero.title":"Déconnectez. Ralentissez. Vivez Helligvær.",
+      "hero.sub":"Construite en 1898 : charme rustique + confort moderne, proche de la mer, des balades et des vues vers les Lofoten.",
+      "hero.badge1":"1898 • authentique",
+      "hero.badge2":"Kayaks & vélos",
+      "hero.note":"Disponibilités et prix final sur Airbnb/Booking.com.",
+      "hero.quickTitle":"En bref",
+      "hero.quickCopy":"Pour celles et ceux qui veulent nature, silence et une vraie maison nord-norvégienne.",
+
+      "facts.guests":"Jusqu’à 6 personnes","facts.guestsSub":"Maison entière",
+      "facts.beds":"3 chambres • 7 lits","facts.bedsSub":"Famille & amis",
+      "facts.ferry":"~45–60 min ferry express","facts.ferrySub":"depuis Bodø centre",
+      "facts.view":"Vues panoramiques","facts.viewSub":"vers les Lofoten",
+
+      "cta.airbnb":"Réserver sur Airbnb",
+      "cta.booking":"Réserver sur Booking.com",
+      "cta.maps":"Ouvrir dans Maps",
+
+      "story.title":"L’histoire",
+      "story.p1":"Mariehuset est une ferme insulaire de 1898 à Helligvær, accessible en ferry express depuis Bodø. Cuisine/salle de bain modernes + charme d’origine.",
+      "story.p2":"Café du matin, courte marche vers un point de vue, été : kayak. Hiver : aurores boréales et silence.",
+
+      "sell.title":"Pourquoi on l’adore",
+      "sell.f1t":"Maison authentique de 1898","sell.f1d":"Histoire, chaleur et caractère.",
+      "sell.f2t":"Expériences d’archipel","sell.f2d":"Pêche, randonnée, (apnée), kayak — entouré d’îles.",
+      "sell.f3t":"Aurores & calme","sell.f3d":"Peu de pollution lumineuse — parfait en hiver.",
+
+      "exp.title":"Expériences signature",
+      "exp.e1t":"Kayak entre les îlots","exp.e1d":"Passages étroits, petites plages et eaux claires.",
+      "exp.e2t":"Pêcher votre dîner","exp.e2d":"Pêche dans l’archipel — cuisine confortable sur place.",
+      "exp.e3t":"Points de vue 360°","exp.e3d":"Petite marche — grande vue, souvent jusqu’aux Lofoten.",
+      "exp.note":"Note sécurité : activités nautiques = expérience et prudence requises.",
+
+      "gallery.title":"Galerie",
+      "gallery.note":"Photos actuellement liées depuis Airbnb (mieux : héberger vos originaux plus tard).",
+
+      "amen.title":"Équipements",
+      "amen.a1t":"Accès mer/plage","amen.a1d":"Accès rapide au bord de mer et aux petites plages.",
+      "amen.a2t":"Cuisine","amen.a2d":"Cuisiner confortablement — idéal pour le poisson frais.",
+      "amen.a3t":"Wi-Fi + linge","amen.a3d":"Wi-Fi, lave-linge et sèche-linge.",
+      "amen.note":"La liste complète est sur les plateformes de réservation.",
+
+      "loc.title":"Localisation",
+      "loc.addrT":"Adresse :",
+      "loc.addr":"Kortbølgen 8, 8095 Helligvær, Norvège",
+      "loc.getTitle":"Accès",
+      "loc.getCopy":"Ferry express depuis Bodø centre vers Helligvær. Vérifier météo et horaires.",
+      "loc.mapsBtn":"Ouvrir dans Google Maps",
+      "loc.mapTitle":"Point précis",
+
+      "book.title":"Réservation",
+      "book.copy":"Pour les disponibilités, le prix final et les conditions : réservez via les plateformes ci-dessous.",
+      "book.airbnb":"Voir sur Airbnb",
+      "book.booking":"Voir sur Booking.com",
+      "book.note":"Astuce : plus tard, on peut ajouter une réservation directe (Stripe + calendrier).",
+
       "faq.title":"FAQ",
-      "faq.linen.q":"Les draps et serviettes sont-ils inclus ?",
-      "faq.linen.a":"En option. Des sets complets pour tous les lits + serviettes sont disponibles. Apportez les vôtres pour un prix plus bas.",
-      "faq.cleaning.q":"Le ménage est-il inclus ?",
-      "faq.cleaning.a":"Non. Les produits de nettoyage sont fournis, les voyageurs nettoient eux-mêmes.",
-      "faq.pets.q":"Animaux ou chiens d’assistance autorisés ?",
-      "faq.pets.a":"Non — animaux et chiens d’assistance non autorisés.",
-      "faq.location.q":"Où se situe exactement la maison ?",
-      "faq.location.a":"Kortbølgen 8, 8095 Helligvær. Utilisez la carte ci-dessus pour naviguer.",
-      "faq.booking.q":"Où voir le prix final, l’annulation et la disponibilité ?",
-      "faq.booking.a":"Sur Airbnb/Booking.com — disponibilité, prix total et conditions y sont indiqués.",
-      "contact.title":"Contact",
-      "contact.bestTitle":"Meilleur moyen de nous joindre",
-      "contact.bestText":"Merci d’écrire via Airbnb/Booking.com (le plus rapide + tout au même endroit).",
-      "contact.airbnb":"Ouvrir l’annonce Airbnb","contact.booking":"Ouvrir l’annonce Booking.com",
-      "contact.optionalTitle":"Contact direct (optionnel)",
-      "contact.optionalText":"Si vous souhaitez afficher un contact direct, remplacez les éléments ci-dessous :",
-      "footer.note":"Réservation via Airbnb et Booking.com."
+      "faq.q1":"Comment venir ?",
+      "faq.a1":"Ferry express depuis Bodø centre vers Helligvær. Vérifier météo et horaires.",
+      "faq.q2":"C’est une maison moderne de luxe ?",
+      "faq.a2":"Maison historique (1898) avec cuisine/sdb modernes — charme authentique avant tout.",
+      "faq.q3":"Serviettes & draps inclus ?",
+      "faq.a3":"Optionnel. Vous pouvez apporter les vôtres pour un prix plus bas.",
+      "faq.q4":"Ménage inclus ?",
+      "faq.a4":"Non. Produits de nettoyage fournis.",
+      "faq.q5":"Animaux / chiens d’assistance ?",
+      "faq.a5":"Animaux et chiens d’assistance non autorisés.",
+
+      "foot.note":"Réservation via Airbnb et Booking.com."
     }
   };
 
   function setLang(lang){
     document.documentElement.lang = lang === "no" ? "no" : lang;
-    document.querySelectorAll("[data-i18n]").forEach(el => {
+    document.querySelectorAll("[data-i18n]").forEach(el=>{
       const key = el.getAttribute("data-i18n");
-      const val = translations[lang][key];
-      if (typeof val === "string") el.innerHTML = val;
+      if(t[lang] && t[lang][key]) el.innerHTML = t[lang][key];
     });
-    document.querySelectorAll(".langbtn").forEach(b => b.classList.toggle("active", b.dataset.lang === lang));
+    document.querySelectorAll(".langbtn").forEach(b=>b.classList.toggle("active", b.dataset.lang === lang));
     localStorage.setItem("siteLang", lang);
   }
 
-  document.querySelectorAll(".langbtn").forEach(btn => {
-    btn.addEventListener("click", () => setLang(btn.dataset.lang));
+  document.querySelectorAll(".langbtn").forEach(btn=>{
+    btn.addEventListener("click", ()=>setLang(btn.dataset.lang));
   });
 
   setLang(localStorage.getItem("siteLang") || "en");
 </script>
 
 </body>
-</html>
+  </html>
